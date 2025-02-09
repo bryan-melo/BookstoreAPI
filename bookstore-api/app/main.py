@@ -7,7 +7,7 @@ def read_root():
     return {"message": "Welcome to the Bookstore API!!"}
 
 
-
+# Updata a todo
 @app.get('/todos/{to_do}')
 async def get_todos(todo_id: int):
     for todo in todos:
