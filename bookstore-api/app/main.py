@@ -30,4 +30,12 @@ async def get_book(book_id: int):
     else:
         return  { "error": "book not in library." }
         
+
+@app.delete("/delete-book/{book_id}")
+async def delete_book(book_id: int):
+    if book_id in books:
+        books.delete(books[book_id])
+        return { "deleted": "book deleted"}
+    else:
+        return { "error": "The book you are trying to remove does not exist in this library. "}
         
