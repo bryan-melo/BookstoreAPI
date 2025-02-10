@@ -23,6 +23,7 @@ async def delete_todo(todo_int: int):
             todos.remove(todo)
             
 
+# Get book by book id
 @app.get_book('/get-book/{book_id}')
 async def get_book(book_id: int):
     if book_id in books:
@@ -31,6 +32,7 @@ async def get_book(book_id: int):
         return  { "error": "book not in library." }
         
 
+# Delete book by book id
 @app.delete("/delete-book/{book_id}")
 async def delete_book(book_id: int):
     if book_id in books:
