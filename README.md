@@ -38,3 +38,5 @@ A simple RESTful API built with FastAPI and Docker, designed to manage a booksto
 4. Access the application:
 * API: http://localhost:8000
 * API Docs: http://localhost:8000/docs
+
+  
